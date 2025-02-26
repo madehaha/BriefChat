@@ -1,0 +1,17 @@
+### Register
+POST http://localhost:8080/chat/register
+Content-Type: application/json
+
+{
+  "account": "bubulu",
+  "password": "123456"
+}
+
+### Login
+POST http://localhost:8080/chat/login
+Content-Type: application/json
+
+{
+"account": "bubulu",
+"password": "123456"
+}
