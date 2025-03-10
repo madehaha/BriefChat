@@ -69,6 +69,7 @@ func JwtMiddleWare() gin.HandlerFunc {
 			c.Abort()
 			return
 		}
+		println(authHeader)
 		tokenString := strings.Split(authHeader, "Bearer ")[1]
 		token, err := jwt.ParseWithClaims(tokenString, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 			// 验证 JWT 使用的签名算法

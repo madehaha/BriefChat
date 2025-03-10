@@ -17,10 +17,14 @@ func (c *ChaterRouterGroup) Init(router *gin.RouterGroup) {
 	{
 		chatRouterWithoutJwt.POST("register", chatApi.Register)
 		chatRouterWithoutJwt.POST("login", chatApi.Login)
-		chatRouter.GET("all/:id", chatApi.History)
-		//chatRouter.POST("send", chatApi.Send)
-		//chatRouter.GET("self", chatApi.ChaterInfo)
-		//chatRouter.POST("change", chatApi.ChangeInfo)
+		chatRouter.GET("all/:account", chatApi.History)
+		chatRouter.POST("add/:account", chatApi.AddFriend)
+		chatRouter.GET("friends", chatApi.AllFriends)
+		chatRouter.POST("send", chatApi.SendMessage)
+		chatRouter.GET("self", chatApi.GetSelf)
+		chatRouter.GET("user/:account", chatApi.GetOneUser)
+		chatRouter.POST("upload/avatar", chatApi.UploaderAvatar)
+		chatRouter.POST("upload/info", chatApi.UploaderInfo)
 
 	}
 }

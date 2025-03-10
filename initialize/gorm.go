@@ -25,6 +25,6 @@ func Gorm() *gorm.DB {
 	}
 
 	// 自动迁移数据库，创建表
-	db.AutoMigrate(&entity.Chat{})
+	db.AutoMigrate(&entity.Chat{}, &entity.Message{}, entity.Friend{}, entity.Info{})
 	return db
 }

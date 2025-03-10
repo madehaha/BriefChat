@@ -13,7 +13,7 @@ func main() {
 
 	initialize.Init(r)
 	// 路由配置
-
+	//validate := validator.New()
 	// 启动服务器
 	if err := r.Run(global.Global_APP_SETTING.Address); err != nil {
 		log.Fatal("Failed to start server: ", err)

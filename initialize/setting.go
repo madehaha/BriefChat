@@ -11,11 +11,12 @@ type Config struct {
 	App          global.AppSetting      `json:"app"`
 	Database     global.DatabaseSetting `json:"database"`
 	FileLocation global.FileSetting     `json:"file_location"`
+	API          global.API             `json:"api"`
 }
 
 var config = &Config{}
 
-func Setup() (*global.AppSetting, *global.DatabaseSetting, *global.FileSetting) {
+func Setup() (*global.AppSetting, *global.DatabaseSetting, *global.FileSetting, *global.API) {
 	fileContent, err := os.ReadFile("./conf.json")
 	if err != nil {
 		log.Fatalln("Can't read conf file")
@@ -24,5 +25,6 @@ func Setup() (*global.AppSetting, *global.DatabaseSetting, *global.FileSetting) 
 	if err != nil {
 		log.Fatalln("Can't parse configuration")
 	}
-	return &config.App, &config.Database, &config.FileLocation
+
+	return &config.App, &config.Database, &config.FileLocation, &config.API
 }

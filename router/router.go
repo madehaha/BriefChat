@@ -1,12 +1,14 @@
 package router
 
 import (
+	"BriefChat/router/ai"
 	"BriefChat/router/chater"
 	"github.com/gin-gonic/gin"
 )
 
 type RouterGroup struct {
 	Chater chater.ChaterRouterGroup
+	AI     ai.AIRouterGroup
 }
 
 var RouterGroupApp = new(RouterGroup)
@@ -15,4 +17,5 @@ var RouterGroupApp = new(RouterGroup)
 
 func (r RouterGroup) Init(rootRouterGroup *gin.RouterGroup) {
 	r.Chater.Init(rootRouterGroup)
+	r.AI.Init(rootRouterGroup)
 }

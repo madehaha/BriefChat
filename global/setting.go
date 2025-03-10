@@ -1,12 +1,16 @@
 package global
 
-import "gorm.io/gorm"
+import (
+	"gorm.io/gorm"
+)
 
 var (
 	Global_Db          *gorm.DB
 	Global_APP_SETTING *AppSetting
 	Global_Db_SETTING  *DatabaseSetting
 	Global_FILE        *FileSetting
+	Global_API         *API
+	//Global_AI_CLIENT   *openai.Client
 )
 
 const (
@@ -29,3 +33,5 @@ type DatabaseSetting struct {
 }
 
 type FileSetting = string
+
+type API = string

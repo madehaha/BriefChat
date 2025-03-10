@@ -15,3 +15,11 @@ Content-Type: application/json
 "account": "bubulu",
 "password": "123456"
 }
+
+### Friends
+GET http://localhost:8080/chat/friends
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYnVidWx1IiwiTWFwQ2xhaW1zIjp7ImV4cCI6MTc0MTQxNDM2NzE3OX19.ESTT0ElvGkw6kYyWi8qalJ2Sb7wZadCc7g4csSkR2rs
+
+### ChatHistory
+GET http://localhost:8080/chat/all/lzj
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYnVidWx1IiwiTWFwQ2xhaW1zIjp7ImV4cCI6MTc0MTQxNDM2NzE3OX19.ESTT0ElvGkw6kYyWi8qalJ2Sb7wZadCc7g4csSkR2rs

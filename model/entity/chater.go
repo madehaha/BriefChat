@@ -11,3 +11,9 @@ type Info struct {
 	Name   string `json:"name" gorm:"column:name;" example:"MOMO"`
 	Avatar string `json:"avatar" gorm:"column:avatar;" example:"example.com/1919810.jpg"`
 }
+
+type FriendInfo struct {
+	Name    string `json:"name" gorm:"column:name;" example:"MOMO"`
+	Avatar  string `json:"avatar" gorm:"column:avatar;" example:"example.com/1919810.jpg"`
+	Account string `json:"account" gorm:"column:account;not null; unique"`
+}
